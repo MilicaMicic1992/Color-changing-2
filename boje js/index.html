@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boja pozadine elementa</title>
+</head>
+        <style>
+                #square {
+                    width: 100px;
+                    height: 100px;
+                    border: 2px solid black;
+                    margin: 5px;
+                }
+        </style>
+<body>
+    <p>Choose color: <input type="color" id="color" />
+    </p>
+    <p><button id="change">Change color</button></p>
+    <div id="square" ></div>
+
+    <script>
+            function change_color () {
+                const input_color = document.getElementById("color")
+                const div_square = document.getElementById("square")
+                div_square.style.backgroundColor = input_color.value
+            }
+
+
+            const button_change = document.getElementById("change")
+            button_change.onclick = change_color
+    </script>
+
+
+</body>
+</html>
